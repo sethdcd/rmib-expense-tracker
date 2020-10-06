@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>RMIB Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Total</h1>
+            <h3 id="totalAmount"></h3>
+        </div>
+        <form id="transactionForm">
+            <div class="form-row">
+                <label for="description" class="col-sm-1 col-form-label">Description</label>
+                <div class="col-3">
+                    <input type="text" class="form-control" id="description" placeholder="Description">
+                </div>               
+                <div>
+                    <label for="type" class="col-sm-2 col-form-label">Type</label>
+                    <label for="income">Income</label>
+                    <input type="radio" id="incomeType" name="transType" value="income">
+                    <label for="expense">Expense</label>
+                    <input type="radio" id="expenseType" name="transType" value="expense">
+                    <label for="debt">Debt</label>
+                    <input type="radio" id="debtType" name="transType" value="debt">
+                    <label for="wealth">Wealth</label>
+                    <input type="radio" id="wealthType" name="transType" value="wealth">
+                </div>
+                <label for="amount" class="col-sm-1 col-form-label">Amount</label>
+                <div class="col-2">
+                    <input type="number" class="form-control" id="transactionAmount" placeholder="Amount">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary">Add transaction</button>
+                </div>
+              </div>
+        </form>
+
+        <div class="row">
+            <div class="col-sm">
+                <h3>Income</h3>
+                <ul id="income" class="list">
+                    <!-- <li class="minus">Cash <span>-$400.00</span><button class="delete-btn">x</button></li> -->
+                </ul>
+            </div>
+            <div class="col-sm">
+                <h3>Expense</h3>
+                <ul id="expense" class="list">
+                    <li class="minus">Cash <span>-$400.00</span><button class="delete-btn">x</button></li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <h3>Debt</h3>
+                <ul id="debt" class="list">
+                    <li class="minus">Cash <span>-$400.00</span><button class="delete-btn">x</button></li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <h3>Wealth</h3>
+                <ul id="wealth" class="list">
+                    <li class="minus">Cash <span>-$400.00</span><button class="delete-btn">x</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
